@@ -10,14 +10,14 @@ stopfile = "shutdown"
 
 if os.path.isfile(stopfile):
     try:
-        subprocess.call(["rm", stopfile])
+        _ = subprocess.call(["rm", stopfile], shell=True)
         print("success - linux \n\n")
     except Exception as e:
         print(e)
         
     
     try:
-        subprocess.call(["del", stopfile])
+        _ = subprocess.call(["del", stopfile], shell=True)
         print("success - windows \n\n")
     except Exception as e:
         print(e)

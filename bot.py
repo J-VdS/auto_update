@@ -41,6 +41,7 @@ async def shutdown(ctx):
     await client.close()
 
 #update
+@client.command()
 async def update(ctx):
     await client.close()   
 

@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 import subprocess
 import os
@@ -8,9 +9,20 @@ b_start = "python bot.py".split(' ')
 stopfile = "shutdown"
 
 if os.path.isfile(stopfile):
-    subprocess.call(["rm", stopfile])
-    subprocess.call(["del", stopfile])
-
+    try:
+        subprocess.call(["rm", stopfile])
+        print("success - linux \n\n")
+    except Exception as e:
+        print(e)
+        
+    
+    try:
+        subprocess.call(["del", stopfile])
+        print("success - windows \n\n")
+    except Exception as e:
+        print(e)
+        
+        
 while 1:
     print("getting latest version")
 

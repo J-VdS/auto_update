@@ -5,12 +5,12 @@ import os
 import time
 
 g_command = "git pull".split(' ')
-b_start = "python bot.py".split(' ')
+b_start = "python3 bot.py".split(' ')
 stopfile = "shutdown"
 
 if os.path.isfile(stopfile):
     try:
-        _ = subprocess.call(["rm", stopfile], shell=True)
+        _ = subprocess.call(["rm","-f", stopfile])
         print("success - linux \n\n")
     except Exception as e:
         print(e)

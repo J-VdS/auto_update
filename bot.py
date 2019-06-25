@@ -1,3 +1,4 @@
+##!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
 import discord
@@ -21,7 +22,7 @@ async def load_cog(ctx, cog):
     try:
         client.load_extension(cog)
     except Exception as e:
-       print(f"loading {cog} failed")
+       print("loading %s failed" %(cog))
        print(e)
 
 @client.command()
@@ -29,7 +30,7 @@ async def unload_cog(ctx, cog):
     try:
         client.unload_extension(cog)
     except Exception as e:
-        print(f"unloading {cog} failed")
+        print("unloading %s failed" %(cog))
         print(e)
 
 #shutdown

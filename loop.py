@@ -3,9 +3,10 @@
 import subprocess
 import os
 import time
+import sys
 
 g_command = "git pull".split(' ')
-b_start = "python3 bot.py".split(' ')
+b_start = f"{sys.executable} bot.py".split(' ')
 stopfile = "shutdown"
 
 if os.path.isfile(stopfile):
